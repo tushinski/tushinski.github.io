@@ -1,0 +1,36 @@
+.info-list {
+  position: relative;
+  margin-top: 30px;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 2px solid black;
+
+  .title {
+    position: absolute;
+    padding: 2px 8px;
+    left: 10px;
+    top: -12px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+
+  .item-title {
+    word-break: break-all;
+  }
+
+  .item-value {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding-left: 30px;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../utils/mq";
+
+
+/**
+ * HTML, BODY
+ */
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-width: $bp-xs;
+  font-family: "JetBrainsMono-Regular";
+}
+
+body {
+  max-width: $bp-xl;
+}
+
+@include from-lg {
+  body {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+/**
+ * TAGS
+ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+div {
+  cursor: default;
+}

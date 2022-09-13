@@ -1,0 +1,72 @@
+@import "@scss/utils/mq";
+
+.section {
+  margin-bottom: var(--size-7);
+  width: 100%;
+  padding: var(--size-5) var(--size-6) 0;
+  max-width: var(--size-12);
+  border-top: 1px solid lightgray;
+}
+
+.header {
+  overflow: hidden;
+}
+
+.header-text {
+  display: inline;
+  font-size: var(--size-6-1);
+}
+
+.header-icon {
+  display: inline-block;
+  width: var(--size-7);
+  height: var(--size-6-1);
+
+  svg {
+    width: var(--size-6-1);
+    height: var(--size-6-1);
+  }
+}
+
+.content {
+  font-size: var(--size-5);
+
+  h1 {
+    margin-top: var(--size-7);
+    margin-bottom: var(--size-4);
+    font-size: var(--size-6);
+    font-weight: bold;
+  }
+
+  small {
+    font-size: var(--size-5);
+    color: gray;
+  }
+
+  p {
+    margin: var(--size-4) 0;
+  }
+
+  ul {
+
+  }
+
+  a {
+    color: var(--c-light-blue);
+  }
+}
+
+@include from-sm {
+  .section {
+    max-width: var(--size-13);
+    border: none;
+  }
+
+  .header-icon {
+    width: var(--size-7-1);
+  }
+
+  .content {
+    padding-left: var(--size-7-1);
+  }
+}

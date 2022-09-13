@@ -1,0 +1,54 @@
+@import "@scss/utils/mq";
+
+.layout {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  height: calc(100vh - var(--size-8));
+  padding-top: var(--size-6);
+  overflow: hidden;
+}
+
+.main-area {
+  display: none; // flex
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: white;
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.side-area {
+  display: none; // block
+  flex-shrink: 0;
+  width: 300px;
+  height: 100%;
+  overflow: auto;
+  z-index: 2;
+}
+
+.mobile-message {
+  padding: var(--size-7);
+  font-size: var(--size-6);
+}
+
+@include from-lg {
+  .mobile-message {
+    display: none;
+  }
+
+  .main-area {
+    display: block;
+  }
+
+  .side-area {
+    display: block;
+  }
+}

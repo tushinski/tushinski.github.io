@@ -1,0 +1,31 @@
+@import "@scss/utils/mq";
+
+.summary {
+  box-sizing: border-box;
+  width: var(--size-11);
+  padding: var(--size-8) 0;
+  overflow: hidden;
+}
+
+.summary-line {
+  display: flex;
+  align-items: center;
+  margin-top: var(--size-4);
+  font-size: var(--size-6);
+}
+
+.summary-line-icon {
+  margin-right: var(--size-4);
+
+  svg {
+    width: var(--size-7);
+    height: var(--size-7);
+  }
+}
+
+@include from-sm {
+  .summary {
+    width: var(--size-12);
+    padding: var(--size-8) 0;
+  }
+}
