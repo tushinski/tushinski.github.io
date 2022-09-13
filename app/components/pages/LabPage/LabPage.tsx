@@ -19,7 +19,12 @@ export const LabPage: React.FC<Props> = (props) => {
     const dispatch = useDispatch();
 
     function onRoute(route: ExtRouteObject<RouteData>) {
-        dispatch(setSubroute(route));
+        const serializableRoute = {
+            ...route,
+            element: undefined,
+        };
+
+        dispatch(setSubroute(serializableRoute));
     }
 
     function onRouteLeft(route: ExtRouteObject<RouteData>) {

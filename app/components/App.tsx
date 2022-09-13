@@ -29,7 +29,14 @@ export const App: React.FC<Props> = (props) => {
     const documentTitle = title ? docTitle(title) : docTitle("...");
 
     function onRoute(route: ExtRouteObject<RouteData>) {
-        dispatch(setMainRoute(route));
+        if (route.path !== mainRoute?.path) {
+            const serializableRoute = {
+                ...route,
+                element: undefined,
+            };
+
+            dispatch(setMainRoute(serializableRoute));
+        }
     }
 
     function wildcardTrailingPath(path: string) {

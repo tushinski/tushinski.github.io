@@ -6,6 +6,8 @@
   "scripts": {
     "build": "webpack --env development",
     "build-prod": "webpack --env production",
+    "watch": "webpack --watch",
+    "watch-prod": "webpack --env production --watch",
     "test-algorithms": "npm run build && jest",
     "start": "webpack-dev-server --config webpack.config.js"
   },
