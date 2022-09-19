@@ -1,6 +1,7 @@
 @import "@scss/utils/mq";
 
 .section {
+  box-sizing: border-box;
   margin-bottom: var(--size-7);
   width: 100%;
   padding: var(--size-5) var(--size-6) 0;
