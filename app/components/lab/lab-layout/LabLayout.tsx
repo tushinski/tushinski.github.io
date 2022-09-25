@@ -17,7 +17,6 @@ type State = {
 };
 
 export const LabLayout: React.FC<Props> = (props) => {
-    const isMobile = matchMedia(`(max-width: 768px)`).matches;
     const Panel = props.panelComponent;
     let canvas = null;
 
@@ -27,24 +26,17 @@ export const LabLayout: React.FC<Props> = (props) => {
 
     return (
         <div className={s.layout}>
-            <div className={s.mobileMessage}>
-                Currently, lab projects are not supported on mobile version.
+            <div className={s.mainArea}>
+                <div className={s.canvasContainer}>
+                    { canvas }
+                </div>
             </div>
-            {!isMobile &&
-                <>
-                    <div className={s.mainArea}>
-                        <div className={s.canvasContainer}>
-                            { canvas }
-                        </div>
-                    </div>
-                    <div className={s.sideArea}>
-                        <PanelContainer
-                            panel={Panel}
-                            canvasPromise={canvasPromise}
-                        />
-                    </div>
-                </>
-            }
+            <div className={s.sideArea}>
+                <PanelContainer
+                    panel={Panel}
+                    canvasPromise={canvasPromise}
+                />
+            </div>
         </div>
     )
 }
