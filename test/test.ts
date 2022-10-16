@@ -1,19 +1,19 @@
-import {
-    QuickFind,
-    QuickUnion,
-    UnionFindConstructor,
-    WeightedQuickUnion,
-    WeightedQuickUnionWithPathCompression
-} from "../algorithms/ts/union-find/union-find";
 import {Stack} from "../algorithms/ts/fundamental-data-structures/Stack";
-import {add, naturals, removeAt} from "../algorithms/ts/utils/utils";
+import {insertAt, naturals, removeAt} from "../algorithms/ts/utils/utils";
 import {LinkedList} from "../algorithms/ts/fundamental-data-structures/LinkedList";
 import {Queue} from "../algorithms/ts/fundamental-data-structures/Queue";
+import {IQuickUnion} from "../algorithms/ts/union-find/quick-union/IQuickUnion";
+import {QuickFind} from "../algorithms/ts/union-find/quick-union/QuickFind";
+import {QuickUnion} from "../algorithms/ts/union-find/quick-union/QuickUnion";
+import {WeightedQuickUnion} from "../algorithms/ts/union-find/quick-union/WeightedQuickUnion";
+import {
+    WeightedQuickUnionWithPathCompression
+} from "../algorithms/ts/union-find/quick-union/WeightedQuickUnionWithPathCompression";
 
 describe("Union-Find", () => {
-    function testUnionFind(Structure: UnionFindConstructor) {
-        const uf = Structure(10);
+    const structureSize = 10;
 
+    function testUnionFind(uf: IQuickUnion) {
         uf.union(0, 1);
         expect(uf.isConnected(0, 1)).toBe(true);
         expect(uf.isConnected(1,0)).toBe(true);
@@ -28,16 +28,16 @@ describe("Union-Find", () => {
     }
 
     test("Quick Find", () => {
-        testUnionFind(QuickFind);
+        testUnionFind(new QuickFind(structureSize));
     });
     test("Quick Union", () => {
-        testUnionFind(QuickUnion);
+        testUnionFind(new QuickUnion(structureSize));
     });
     test("Weighted Quick Union", () => {
-        testUnionFind(WeightedQuickUnion);
+        testUnionFind(new WeightedQuickUnion(structureSize));
     });
     test("Weighted Quick Union With Path Compression", () => {
-        testUnionFind(WeightedQuickUnionWithPathCompression);
+        testUnionFind(new WeightedQuickUnionWithPathCompression(structureSize));
     });
 });
 
@@ -72,17 +72,17 @@ describe("Fundamental Data Structures", () => {
         compareListAndArray();
 
         list.add(2, 11);
-        array = add(array, 2, 11);
+        array = insertAt(array, 2, 11);
         list.add(0, 22);
-        array = add(array, 0, 22);
+        array = insertAt(array, 0, 22);
         list.add(array.length, 33);
-        array = add(array, array.length, 33);
+        array = insertAt(array, array.length, 33);
         compareListAndArray();
 
         list.addFirst(44);
-        array = add(array, 0, 44);
+        array = insertAt(array, 0, 44);
         list.addLast(55);
-        array = add(array, array.length, 55);
+        array = insertAt(array, array.length, 55);
         compareListAndArray();
 
         let i = 0;

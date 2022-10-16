@@ -4,17 +4,16 @@ import React from "react";
 import s from "./MCSPanel.m.scss";
 import {SquareField} from "../../../../ts/canvas/shapes/SquareField";
 import {parsedIntValue, ParsedIntValue} from "../../../../ts/utils/parsedIntValueParams";
-import {
-    ForEachPercolationSite,
-    MCS,
-    MCSExperimentIterationResult,
-    MCSResult
-} from "../../../../../algorithms/ts/union-find/monte-carlo-simulation";
 import {cssVar} from "../../../../ts/utils/cssVar";
 import {ThemeColorVar} from "../../../../ts/types/enums/ThemeColorVar";
 import {Input} from "../../input/Input";
 import {InfoList} from "../../info-list/InfoList";
 import {Button} from "../../button/Button";
+import {
+    EachPercolationSite,
+    MCS,
+    MCSExperimentIterationResult, MCSResult
+} from "../../../../../algorithms/ts/union-find/monte-carlo-simulation/MCS";
 
 type State = {
     field?: SquareField,
@@ -75,7 +74,7 @@ export const MCSPanel: React.FC<PanelProps> = (props) => {
         }));
     };
 
-    const onIterationResult = ([iterationResult, forEachSite]: [MCSExperimentIterationResult, ForEachPercolationSite]) => {
+    const onIterationResult = ([iterationResult, forEachSite]: [MCSExperimentIterationResult, EachPercolationSite]) => {
         forEachSite((site) => {
             const siteColor = (() => {
                 if (site.isFilled) {
