@@ -1,7 +1,7 @@
 import {CanvasArea} from "../CanvasArea";
 import {CanvasObjectProps} from "../Canvas";
 
-export type SquareFieldProps = {
+type SquareFieldProps = {
     size: number,
     initialSiteColor: string,
     fieldBorderColor?: string,

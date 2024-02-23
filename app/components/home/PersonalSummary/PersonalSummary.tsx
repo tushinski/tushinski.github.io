@@ -27,7 +27,7 @@ export const PersonalSummary: React.FC<Props> = (props) => {
                 <div className={s.summaryLineIcon}>
                     <BarChart/>
                 </div>
-                <span>3 years xp.</span>
+                <span>4 years xp.</span>
             </div>
             <div className={s.summaryLine}>
                 <div className={s.summaryLineIcon}>

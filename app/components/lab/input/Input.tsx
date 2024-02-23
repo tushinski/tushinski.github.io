@@ -5,7 +5,7 @@ import classNames from "classnames";
 type Props = {
     value: string,
     label: string,
-    onInput: (e: SyntheticEvent) => void,
+    onInput: (newValue: string) => void,
     disabled?: boolean,
     error?: string,
 };
@@ -17,7 +17,11 @@ export const Input: React.FC<Props> = (props) => {
     const classnames = classNames(
         s.inputContainer,
         props.error && s.error,
-    )
+    );
+
+    const handleInput = (e: SyntheticEvent) => {
+        props.onInput((e.target as HTMLInputElement).value)
+    }
 
     return (
         <div className={classnames}>
@@ -26,7 +30,7 @@ export const Input: React.FC<Props> = (props) => {
                 placeholder="no value"
                 disabled={!!props.disabled}
                 value={props.value}
-                onInput={props.onInput}
+                onInput={handleInput}
             />
             <div className={s.errorMsg}>{props.error}</div>
         </div>

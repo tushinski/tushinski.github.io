@@ -34,14 +34,18 @@ export const Education: React.FC<Props> = (props) => {
         const dates = `${data.startDate} - ${data.endDate}`;
 
         return (
-            <>
+            <div key={`${title}${dates}`}>
                 <h1>{title}</h1>
                 <small>{dates}</small>
                 <p>{data.faculty}</p>
                 <p>Field: {data.field}</p>
-            </>
+            </div>
         )
     }
 
-    return data.map(entryData => educationEntry(entryData));
+    return (
+        <>
+            {data.map(entryData => educationEntry(entryData))}
+        </>
+    );
 }

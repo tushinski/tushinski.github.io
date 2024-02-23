@@ -108,7 +108,7 @@
     left: 0;
     font-size: var(--size-5);
     color: var(--c-gray);
-    width: 100vw;
+    width: max-content;
   }
 
   .active-nav-item {

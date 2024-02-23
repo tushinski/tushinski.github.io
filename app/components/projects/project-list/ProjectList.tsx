@@ -22,6 +22,7 @@ export const ProjectList: React.FC<Props> = (props) => {
     function list() {
         return data.map(projectData => (
             <ProjectItem
+                key={projectData.url}
                 title={projectData.title}
                 description={projectData.description}
                 url={projectData.url}

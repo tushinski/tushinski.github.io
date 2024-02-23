@@ -1,11 +1,13 @@
 import React from "react";
 import {labRoutes} from "../../../ts/routing/labRoutes";
-import {Link} from "react-router-dom";
 import s from "./LabNav.m.scss";
 import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline';
 import {ThemeColorVar} from "../../../ts/types/enums/ThemeColorVar";
 import {cssVar} from "../../../ts/utils/cssVar";
 import {ProjectItem} from "../../ui/elements/project-item/ProjectItem";
+import isMobile from 'is-mobile';
+
+const isMobileBrowser = isMobile(); // TODO: move to state
 
 type Props = {
 };
@@ -32,11 +34,13 @@ export const LabNav: React.FC<Props> = (props) => {
 
                 return (
                     <ProjectItem
+                        key={data.path}
                         title={data.title}
                         description={data.description}
                         path={data.path}
                         linkIcon={<PlayCircleOutlineIcon/>}
                         style={{color: colors[colorIndex]}}
+                        disabled={data.desktopOnly && isMobileBrowser}
                     />
                 )
             });

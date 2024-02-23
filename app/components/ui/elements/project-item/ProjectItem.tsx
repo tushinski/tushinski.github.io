@@ -9,6 +9,7 @@ type Props = {
     description: string,
     linkIcon: React.ReactNode,
     style?: React.CSSProperties,
+    disabled?: boolean,
 };
 
 type State = {
@@ -17,6 +18,13 @@ type State = {
 export const ProjectItem: React.FC<Props> = (props) => {
 
     function link() {
+        if (props.disabled) {
+            return (
+                <div className={s.itemButtonStub}>
+                    DESKTOP<br/>BROWSERS<br/>ONLY
+                </div>
+            );
+        }
         if (props.url) {
             return (
                 <a

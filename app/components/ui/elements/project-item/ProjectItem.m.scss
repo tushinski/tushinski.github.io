@@ -33,6 +33,17 @@
     width: 100%;
     height: 100%;
   }
+
+  &:hover {
+    filter: brightness(0%);
+  }
+}
+
+.item-button-stub {
+  margin-left: var(--size-4);
+  color: var(--c-black);
+  font-size: var(--size-4);
+  text-align: center;
 }
 
 @include from-sm {

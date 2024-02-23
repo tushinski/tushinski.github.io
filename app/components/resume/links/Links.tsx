@@ -21,11 +21,15 @@ export const Links: React.FC<Props> = (props) => {
 
     function link(data: LinkData) {
         return (
-            <p>
+            <p key={data.src}>
                 <a href={data.src}>{data.title}</a>
             </p>
         )
     }
 
-    return data.map(linkData => link(linkData));
+    return (
+        <>
+            {data.map(linkData => link(linkData))}
+        </>
+    );
 }

@@ -40,10 +40,10 @@ export const Skills: React.FC<Props> = (props) => {
 
     function skillList(title: string, skills: string[]) {
         return (
-            <>
+            <div key={title}>
                 <h1>{title}</h1>
-                {skills.map(skill => <li>{skill}</li>)}
-            </>
+                {skills.map(skill => <li key={skill}>{skill}</li>)}
+            </div>
         )
     }
 

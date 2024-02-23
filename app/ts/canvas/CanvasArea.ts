@@ -10,12 +10,15 @@ export abstract class CanvasArea<T> {
     }
 
     protected rect(props: CanvasRectProps) {
-        props = this.toRelativeProps(props);
-        this.canvas.rect(props);
+        this.canvas.rect(this.toRelativeProps(props));
     }
 
     protected clear() {
         this.canvas.clearReact(this.props);
+    }
+
+    protected clearRect(props: CanvasObjectProps) {
+        this.canvas.clearReact(this.toRelativeProps(props));
     }
 
     private toRelativeProps<T extends CanvasObjectProps>(props: T): T {

@@ -1,26 +1,19 @@
-import React, {useState} from "react";
-import s from "./LabLayout.m.scss";
-import {PanelContainer, PanelProps} from "../panel-container/PanelContainer";
-import {CanvasComponent} from "../canvas/CanvasComponent";
-import {ArrowBack} from "@mui/icons-material";
-import {Link} from "react-router-dom";
+import React from "react";
+import s from "./canvas-lab-room-layout.m.scss";
+import {PanelContainer} from "../panel-container/PanelContainer";
 import {Canvas} from "../../../ts/canvas/Canvas";
-import classNames from "classnames";
-import {cssVar} from "../../../ts/utils/cssVar";
+import {CanvasComponent} from "../canvas/CanvasComponent";
+import {CanvasLabRoomProps} from "../lab-room/lab-room";
 
-type Props = {
-    title: string,
-    panelComponent: React.FC<PanelProps>,
-};
 
 type State = {
 };
 
-export const LabLayout: React.FC<Props> = (props) => {
+export const CanvasLabRoomLayout: React.FC<CanvasLabRoomProps> = (props) => {
     const Panel = props.panelComponent;
     let canvas = null;
 
-    const canvasPromise = new Promise<Canvas>((res, rej) => {
+    const canvasPromise = new Promise<Canvas>((res) => {
         canvas = <CanvasComponent postStage={res} />;
     });
 

@@ -21,7 +21,7 @@ export const Languages: React.FC<Props> = (props) => {
 
     function language(data: LanguageData) {
         return (
-            <p>{data.name}: {data.level}</p>
+            <p key={data.name}>{data.name}: {data.level}</p>
         )
     }
 

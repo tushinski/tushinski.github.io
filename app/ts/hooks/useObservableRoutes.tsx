@@ -3,7 +3,7 @@ import { RouteObject } from "react-router";
 import {RoutePoint} from "../../components/common/route-point/RoutePoint";
 import {useRoutes} from "react-router";
 
-type Route<T> = ExtRouteObject<T>;
+export type Route<T> = ExtRouteObject<T>;
 type RouteCallback<T> = (route: ExtRouteObject<T>) => void;
 type ObservableRoutesOptions<RouteType> = {
     routes: Route<RouteType>[],

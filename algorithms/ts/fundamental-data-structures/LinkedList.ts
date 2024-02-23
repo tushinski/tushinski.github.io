@@ -63,12 +63,12 @@ export class LinkedList<T> {
 
     private insertBefore(targetPosNode: Node<T>, value: T): Node<T> {
         const newNode = new Node(value);
-        this._size++;
 
         if (!targetPosNode) {
             this.addLast(value);
             return newNode;
         }
+        this._size++;
 
         if (!targetPosNode.prev) {
             this.head = newNode;
@@ -254,6 +254,30 @@ export class LinkedList<T> {
 
     iterator() {
         return this[Symbol.iterator]();
+    }
+
+    forEach(cb: (value: T) => void) {
+        for (let value of this) {
+            cb(value);
+        }
+    }
+
+    every(predicate: (value: T) => boolean): boolean {
+        for (let value of this) {
+            if (!predicate(value)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    some(predicate: (value: T) => boolean): boolean {
+        for (let value of this) {
+            if (predicate(value)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     toArray(): T[] {

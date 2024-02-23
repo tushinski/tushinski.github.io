@@ -119,12 +119,12 @@ export const MCSPanel: React.FC<PanelProps> = (props) => {
         }
 
         function getOnFieldInput(statePropKey: keyof State) {
-            return function onFieldInput(e: SyntheticEvent) {
+            return function onFieldInput(newValue: string) {
                 const parsedValue = state[statePropKey] as ParsedIntValue;
 
                 setState((prev) => ({
                     ...prev,
-                    [statePropKey]: parsedValue.parse((e.target as HTMLInputElement).value),
+                    [statePropKey]: parsedValue.parse(newValue),
                 }));
             }
         }

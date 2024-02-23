@@ -36,10 +36,10 @@ export class WeightedQuickUnion extends AbstractQuickUnion implements IQuickUnio
 
         // link smaller tree to the bigger one
         if (this.treeSizes[pRoot] > this.treeSizes[qRoot]) {
-            this.indexArray[qRoot] = this.indexArray[pRoot];
+            this.indexArray[qRoot] = pRoot;
             this.treeSizes[pRoot] += this.treeSizes[qRoot];
         } else {
-            this.indexArray[pRoot] = this.indexArray[qRoot];
+            this.indexArray[pRoot] = qRoot;
             this.treeSizes[qRoot] += this.treeSizes[pRoot];
         }
     }

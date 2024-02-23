@@ -1,5 +1,6 @@
 import React from "react";
 import {EmploymentHistoryEntry} from "../../../ts/types/entities/EmploymentHistoryEntry";
+import ResumeSectionCss from '../resume-section/ResumeSection.m.scss';
 
 type Props = {
 };
@@ -78,20 +79,24 @@ export const EmploymentHistory: React.FC<Props> = (props) => {
 
     function employmentEntry(data: EmploymentHistoryEntry) {
         return (
-            <>
+            <div key={`${data.employer}-${data.startDate}-${data.endDate}`}>
                 <h1>{data.position}<br/> at {data.employer}, {data.city}</h1>
                 <p><small>{data.startDate} - {data.endDate}</small></p>
                 <p>Projects: {data.projectsDescription}</p>
                 <p>Stack: {data.stack.join(", ")}</p>
-                <p>
+                <div className={ResumeSectionCss.p}>
                     Responsibilities:
                     <ul>
-                        {data.responsibilities.map(resp => <li>{resp}</li>)}
+                        {data.responsibilities.map(resp => <li key={resp}>{resp}</li>)}
                     </ul>
-                </p>
-            </>
+                </div>
+            </div>
         )
     }
 
-    return data.map(entry => employmentEntry(entry));
+    return (
+        <>
+            {data.map(entry => employmentEntry(entry))}
+        </>
+    );
 }

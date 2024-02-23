@@ -19,7 +19,7 @@ type State = {
 const displayedRoutes = [
     mainRoutes.home,
     mainRoutes.lab,
-    mainRoutes.projects,
+    // mainRoutes.projects,
     mainRoutes.resume,
 ];
 
@@ -38,10 +38,9 @@ export const Header: React.FC<Props> = (props) => {
                 ]);
 
                 return (
-                    <div className={className}>
+                    <div className={className} key={routeMeta.path}>
                         <Link
                             to={routeMeta.path}
-                            key={routeMeta.path}
                             onClick={onBurgerClick}
                         >
                             {routeMeta.title}
