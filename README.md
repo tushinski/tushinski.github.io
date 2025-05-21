@@ -1,1 +1,2 @@
-## Just a website
+# My personal website
+[-> visit](https://tushinski.github.io/)
