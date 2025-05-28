@@ -1,5 +1,6 @@
 import React from 'react'
 import { Icon } from '../../markup/icon/icon'
+import s from '../resume-content.module.scss'
 
 type Props = {}
 
@@ -7,12 +8,14 @@ export const ResumeDevVersion: React.FC<Props> = () => {
   return (
     <>
       <h1>Alex Tushinski</h1>
-      <section>
-        <Icon name="person"/> Frontend Developer / Frontend Team Lead<br/>
-        <Icon name="calendar_month"/> 7 years of experience <br/>
-        <Icon name="location_on"/> Saint-Petersburg, Russian Federation <br/>
-        <Icon name="chat" /> <a href="https://t.me/tushinski">@tushinski</a> <br/>
-      </section>
+      <a href="https://avatars.githubusercontent.com/u/25905213?v=4" target="_blank">
+        <img className={s.avatar} src="https://avatars.githubusercontent.com/u/25905213?v=4"/>
+      </a><br/>
+      <Icon name="person"/> Frontend Developer / Frontend Team Lead<br/>
+      <Icon name="calendar_month"/> 7 years of experience <br/>
+      <Icon name="location_on"/> Saint-Petersburg, Russian Federation <br/>
+      <Icon name="chat" /> <a href="https://t.me/tushinski">@tushinski</a> <br/>
+
       <h2> <Icon name="work"/> Employment history</h2>
       <section>
         <h3>Lead Frontend Developer</h3>
