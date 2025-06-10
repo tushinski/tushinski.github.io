@@ -11,7 +11,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
       <a href="https://avatars.githubusercontent.com/u/25905213?v=4" target="_blank">
         <img className={s.avatar} src="https://avatars.githubusercontent.com/u/25905213?v=4"/>
       </a><br/>
-      <Icon name="person"/> Frontend Developer / Frontend Team Lead<br/>
+      <Icon name="person"/> Senior/Lead Frontend Developer<br/>
       <Icon name="calendar_month"/> 7 years of experience <br/>
       <Icon name="location_on"/> Saint-Petersburg, Russian Federation <br/>
       <Icon name="chat" /> <a href="https://t.me/tushinski">@tushinski</a> <br/>
@@ -36,6 +36,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
             <li>technical design of new projects (architecture, UI/UX, web APIs)</li>
             <li>technical elaboration of new product features (quality gates)</li>
             <li>managing tasks: creation/decomposition/estimation</li>
+            <li>writing an internal code review guide</li>
           </ul>
         </section>
 
@@ -44,7 +45,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <Icon name="corporate_fare"/>  <a href="https://tech.vk.com/">VK Tech</a><br/>
           <Icon name="calendar_clock"/>  Mar 2024 - Mar 2025 <br/>
           <br/>
-          Project: a no-code solution for automation of business processes.<br/>
+          Project: a modular no-code solution for automation of business processes.<br/>
           <br/>
           Responsibilities:
           <ul>
@@ -67,7 +68,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
             <li>development planning</li>
             <li>organization of conducting SCRUM rituals <i>(sprint planning/pre-planning, retro, backlog grooming, etc.)</i></li>
             <li>team management <i>(1-1 meets, status meets, team goals, performance review etc.)</i></li>
-            <li>developing a complex frontend library</li>
+            <li>developing a set of complex interdependent frontend libraries</li>
             <li>developing new web services (Golang)</li>
             <li>writing user documentation</li>
             <li>code review</li>
@@ -99,10 +100,10 @@ export const ResumeDevVersion: React.FC<Props> = () => {
             <li>code review</li>
             <li>writing unit tests</li>
             <li>participating in sprint plannings</li>
-            <li>tasks decomposition/estimation</li>
+            <li>task decomposition/estimation</li>
             <li>participating in interviews with candidates</li>
             <li>designing deployment strategy</li>
-            <li>creating CI/CD pipelines</li>
+            <li>configuring CI/CD pipelines</li>
           </ul>
         </section>
 
@@ -119,7 +120,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
             <li>code review</li>
             <li>legacy code analysis</li>
             <li>legacy code refactoring</li>
-            <li>tasks decomposition/estimation</li>
+            <li>task decomposition/estimation</li>
             <li>mentoring (2 junior devs)</li>
           </ul>
         </section>
@@ -181,13 +182,13 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <li>ROP</li>
           <li>KISS, DRY, YAGNI</li>
           <li>Microservice Architecture & Micro Frontends</li>
+          <li>Monorepositories</li>
           <li>Hexagonal Architecture</li>
           <li>DDD</li>
           <li>TBD (Trunk Based Development)</li>
           <li>Quality Gates</li>
           <li>Code Quality Analysis</li>
-          <li>Code Smells</li>
-          <li>Code Refactoring Techniques</li>
+          <li>Code Smells & Refactoring Techniques</li>
           <li>Code Review Best Practices</li>
         </ul>
         <br/>
