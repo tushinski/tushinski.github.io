@@ -23,7 +23,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <Icon name="corporate_fare"/>  <a href="https://tech.vk.com/">VK Tech</a><br/>
           <Icon name="calendar_clock"/>  Mar 2025 - Present<br/>
           <br/>
-          Projects: <a href="https://biz.mail.ru/teams/">VK Teams</a> (Web Version), <a href="https://biz.mail.ru/">VK Workspace</a> Admin Panel (B2B)<br/>
+          Projects: <a href="https://biz.mail.ru/teams/">VK Teams</a> (Web Version), <a href="https://biz.mail.ru/">VK Workspace</a> Admin Panel<br/>
           <br/>
           Responsibilities:
           <ul>
@@ -89,8 +89,8 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <br/>
           Responsibilities:
           <ul>
-            <li>setting up </li>
             <li>maintaining a frontend monorepository</li>
+            <li>developing utilities for monorepo management</li>
             <li>developing shared monorepo libraries <i>(including a ui-library)</i></li>
             <li>developing new features</li>
             <li>technical design of new product features</li>
@@ -101,6 +101,8 @@ export const ResumeDevVersion: React.FC<Props> = () => {
             <li>participating in sprint plannings</li>
             <li>tasks decomposition/estimation</li>
             <li>participating in interviews with candidates</li>
+            <li>designing deployment strategy</li>
+            <li>creating CI/CD pipelines</li>
           </ul>
         </section>
 
@@ -141,14 +143,26 @@ export const ResumeDevVersion: React.FC<Props> = () => {
 
       </section>
 
-      <h2> <Icon name="skateboarding"/> Skills</h2>
+      <h2> <Icon name="architecture"/> Skills</h2>
       <section>
         <ul>
+          <li>JS ES9+</li>
           <li>TypeScript</li>
-          <li>React, React Ecosystem</li>
+          <li>Sass, CSS Modules, Styled Components</li>
+          <li>React</li>
+          <li>Redux / MobX</li>
+          <li>React Router, React Form, React Query</li>
           <li>Jest, Playwright</li>
+          <li>Sentry</li>
         </ul>
-        <br/>        
+        <br/>   
+        <ul>
+          <li>Canvas (2D)</li>
+          <li>Web Components (Custom Elements)</li>
+          <li>Shadow Root</li>
+          <li>Web RTC (beginner)</li>
+        </ul>
+        <br/> 
         <ul>
           <li>NPM / PNPM</li>
           <li>NPM Workspaces / Rush</li>
@@ -166,21 +180,23 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <li>Functional Programming</li>
           <li>ROP</li>
           <li>KISS, DRY, YAGNI</li>
-        </ul>
-        <br/>
-        <ul>
-          <li>Microservice Architecture</li>
+          <li>Microservice Architecture & Micro Frontends</li>
           <li>Hexagonal Architecture</li>
           <li>DDD</li>
+          <li>TBD (Trunk Based Development)</li>
+          <li>Quality Gates</li>
           <li>Code Quality Analysis</li>
           <li>Code Smells</li>
           <li>Code Refactoring Techniques</li>
+          <li>Code Review Best Practices</li>
         </ul>
         <br/>
         <ul>
           <li>Golang</li>
           <li>SQL</li>
           <li>PostgreSQL</li>
+          <li>Swagger</li>
+          <li>Postman</li>
         </ul>
         <br/>
         <ul>
