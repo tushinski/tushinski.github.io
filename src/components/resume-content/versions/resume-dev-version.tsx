@@ -148,6 +148,16 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <li>React, React Ecosystem</li>
           <li>Jest, Playwright</li>
         </ul>
+        <br/>        
+        <ul>
+          <li>NPM / PNPM</li>
+          <li>NPM Workspaces / Rush</li>
+          <li>Webpack</li>
+          <li>Git</li>
+          <li>GitLab</li>
+          <li>NodeJS</li>
+          <li>Linux</li>
+        </ul>
         <br/>
         <ul>
           <li>REST</li>
@@ -156,22 +166,21 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <li>Functional Programming</li>
           <li>ROP</li>
           <li>KISS, DRY, YAGNI</li>
-          <li>DDD</li>
-          <li>Hexagonal Architecture</li>
+        </ul>
+        <br/>
+        <ul>
           <li>Microservice Architecture</li>
+          <li>Hexagonal Architecture</li>
+          <li>DDD</li>
           <li>Code Quality Analysis</li>
           <li>Code Smells</li>
           <li>Code Refactoring Techniques</li>
         </ul>
         <br/>
         <ul>
-          <li>Git</li>
-          <li>NPM / PNPM</li>
-          <li>Webpack</li>
-          <li>NPM Workspaces / Rush</li>
-          <li>GitLab</li>
-          <li>NodeJS</li>
-          <li>Linux</li>
+          <li>Golang</li>
+          <li>SQL</li>
+          <li>PostgreSQL</li>
         </ul>
         <br/>
         <ul>

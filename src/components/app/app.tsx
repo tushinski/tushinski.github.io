@@ -1,10 +1,10 @@
 import { useMemo } from "react"
 import { Resume } from "../resume/resume"
 import 'material-symbols'
-import { getResumeVersion } from "./utils/get-resume-version"
+import { getResumeVersionParam } from "./utils/get-resume-version-param"
 
 export const App = () => {
-  const resumeVersion = useMemo(getResumeVersion, [])
+  const resumeVersion = useMemo(getResumeVersionParam, [])
   return (
     <Resume version={resumeVersion} />
   )

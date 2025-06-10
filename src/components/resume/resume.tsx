@@ -2,11 +2,10 @@ import React from 'react'
 import s from './resume.module.scss'
 import { SaveButton } from '../save-button/save-button'
 import { ResumeContent } from '../resume-content/resume-content'
-import type { ResumeVersions } from '../../types/resume-versions'
 import { If } from '../utility-components/if/if'
 
 type Props = {
-  version?: ResumeVersions | undefined,
+  version?: string | undefined,
 }
 
 export const Resume: React.FC<Props> = (props) => {

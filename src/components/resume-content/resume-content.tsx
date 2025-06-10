@@ -1,14 +1,10 @@
 import React, { useMemo } from 'react'
 import { Icon } from '../markup/icon/icon'
 import s from './resume-content.module.scss'
-import { ResumeVersions } from '../../types/resume-versions'
-import { ResumeDevVersion } from './versions/resume-dev-version'
-import { ResumeFullVersion } from './versions/resume-full-version'
-import { ResumeTLVersion } from './versions/resume-tl-version'
-import { ResumePMVersion } from './versions/resume-pm-version'
+import { getResumeVersion } from './get-resume-version'
 
 type Props = {
-  version?: ResumeVersions | undefined,
+  version?: string | undefined,
 }
 
 export const ResumeContent: React.FC<Props> = ({version}) => {
@@ -22,17 +18,12 @@ export const ResumeContent: React.FC<Props> = ({version}) => {
     )
   }
   const Content = useMemo(() => {
-    switch (version) {
-      case ResumeVersions.Full:
-        return ResumeFullVersion
-      case ResumeVersions.Frontend:
-        return ResumeDevVersion
-      case ResumeVersions.TL:
-        return ResumeTLVersion
-      case ResumeVersions.PM:
-        return ResumePMVersion
-    }
+    return getResumeVersion(version)
   }, [version])
+
+  if (!Content) {
+    return null
+  }
   
   return (
     <div className={s.content}>
