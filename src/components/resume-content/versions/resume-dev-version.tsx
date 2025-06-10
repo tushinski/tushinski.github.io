@@ -27,18 +27,19 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <br/>
           Responsibilities:
           <ul>
-            <li>development of new features</li>
+            <li>developing new features</li>
+            <li>writing unit and e2e tests</li>
             <li>technical leadership / knowledge sharing</li>
-            <li>participation in activities of a dev community</li>
-            <li>code refactoring</li>
+            <li>participating in activities of a dev community</li>
             <li>cross-team code review</li>
-            <li>technical design of new features (UI/UX, web APIs)</li>
+            <li>code refactoring and refactoring planning</li>
+            <li>technical design of new projects (architecture, UI/UX, web APIs)</li>
             <li>technical elaboration of new product features (quality gates)</li>
-            <li>tasks decomposition/estimation</li>
+            <li>managing tasks: creation/decomposition/estimation</li>
           </ul>
         </section>
 
-        <h3> Team Lead</h3>
+        <h3> Team Lead (author of the project)</h3>
         <section>
           <Icon name="corporate_fare"/>  <a href="https://tech.vk.com/">VK Tech</a><br/>
           <Icon name="calendar_clock"/>  Mar 2024 - Mar 2025 <br/>
@@ -47,15 +48,27 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <br/>
           Responsibilities:
           <ul>
-            <li>design of project architecture</li>
-            <li>communication with PM, CPO, CTO</li>
-            <li>communication with SRE and DevOps teams</li>
-            <li>communication with QA team</li>
+            <li>
+              designing project's architecture from scratch
+              <ul>
+                <li>RESTful API</li>
+                <li>microservices (Golang, postgres) + united API Gateway</li>
+                <li>custom role model</li>
+                <li>frontend monorepo with multiple apps and libraries</li>
+                <li>unique event-based mechanics for client-server interactions</li>
+                <li>own admin-panel</li>
+                <li>integrations with 3P systems</li>
+                <li>client-side integrations</li>
+              </ul>
+            </li>
+            <li>communicating with PM, CPO, CTO</li>
+            <li>communicating with SRE and DevOps teams</li>
+            <li>communicating with QA team</li>
             <li>development planning</li>
             <li>organization of conducting SCRUM rituals <i>(sprint planning/pre-planning, retro, backlog grooming, etc.)</i></li>
             <li>team management <i>(1-1 meets, status meets, team goals, performance review etc.)</i></li>
-            <li>development of a complex frontend library</li>
-            <li>development of new web services (Golang)</li>
+            <li>developing a complex frontend library</li>
+            <li>developing new web services (Golang)</li>
             <li>writing user documentation</li>
             <li>code review</li>
           </ul>
@@ -76,15 +89,18 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <br/>
           Responsibilities:
           <ul>
-            <li>monorepo maintenance</li>
-            <li>development of shared monorepo libraries <i>(including an UI components library)</i></li>
-            <li>development of new features</li>
+            <li>setting up </li>
+            <li>maintaining a frontend monorepository</li>
+            <li>developing shared monorepo libraries <i>(including a ui-library)</i></li>
+            <li>developing new features</li>
+            <li>technical design of new product features</li>
+            <li>technical design of new projects</li>
             <li>code refactoring</li>
             <li>code review</li>
-            <li>writing tests</li>
-            <li>participation in sprint plannings</li>
+            <li>writing unit tests</li>
+            <li>participating in sprint plannings</li>
             <li>tasks decomposition/estimation</li>
-            <li>participation in interviews with candidates</li>
+            <li>participating in interviews with candidates</li>
           </ul>
         </section>
 
@@ -97,11 +113,12 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <br/>
           Responsibilities:
           <ul>
-            <li>development of new features</li>
+            <li>developing new features</li>
             <li>code review</li>
-            <li>code refactoring</li>
+            <li>legacy code analysis</li>
+            <li>legacy code refactoring</li>
             <li>tasks decomposition/estimation</li>
-            <li>mentoring</li>
+            <li>mentoring (2 junior devs)</li>
           </ul>
         </section>
 
@@ -114,9 +131,11 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <br/>
           Responsibilities:
           <ul>
-            <li>development of new projects from scratch</li>
-            <li>close cooperation with a designer</li>
-            <li>participation in designing web APIs</li>
+            <li>developing new projects from scratch</li>
+            <li>cooperating with a designer</li>
+            <li>participating in designing web APIs</li>
+            <li>mentoring (1 junior dev)</li>
+            <li>participating in communication with customers</li>
           </ul>
         </section>
 
@@ -132,11 +151,17 @@ export const ResumeDevVersion: React.FC<Props> = () => {
         <br/>
         <ul>
           <li>REST</li>
-          <li>SOLID</li>
           <li>Design Patterns</li>
+          <li>SOLID</li>
           <li>Functional Programming</li>
           <li>ROP</li>
           <li>KISS, DRY, YAGNI</li>
+          <li>DDD</li>
+          <li>Hexagonal Architecture</li>
+          <li>Microservice Architecture</li>
+          <li>Code Quality Analysis</li>
+          <li>Code Smells</li>
+          <li>Code Refactoring Techniques</li>
         </ul>
         <br/>
         <ul>
