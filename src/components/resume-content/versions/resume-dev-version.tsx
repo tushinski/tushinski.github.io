@@ -153,6 +153,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <li>React</li>
           <li>Redux / MobX</li>
           <li>React Router, React Form, React Query</li>
+          <li>GraphQL</li>
           <li>Jest, Playwright</li>
           <li>Sentry</li>
         </ul>
@@ -181,11 +182,13 @@ export const ResumeDevVersion: React.FC<Props> = () => {
           <li>Functional Programming</li>
           <li>ROP</li>
           <li>KISS, DRY, YAGNI</li>
+          <li>Layered Architecture</li>
           <li>Microservice Architecture & Micro Frontends</li>
-          <li>Monorepositories</li>
           <li>Hexagonal Architecture</li>
           <li>DDD</li>
+          <li>FSD (Feature-Sliced Design)</li>
           <li>TBD (Trunk Based Development)</li>
+          <li>Monorepositories</li>
           <li>Quality Gates</li>
           <li>Code Quality Analysis</li>
           <li>Code Smells & Refactoring Techniques</li>
@@ -212,7 +215,7 @@ export const ResumeDevVersion: React.FC<Props> = () => {
         <section>
           <Icon name="castle"/>  <a href="https://english.spbstu.ru/">Peter the Great St.Petersburg Polytechnic University</a>, Higher School of Supercomputer Science and Technology<br/>
           <Icon name="crop_free"/>  Informatics and Computer Engineering<br/>
-          <Icon name="calendar_clock"/> Sep, 2019 - May, 2021 <i>(1.5 years)</i>
+          <Icon name="calendar_clock"/> Sep, 2017 - May, 2019 <i>(1.5 years)</i>
         </section>
 
         <h3>Secondary vocational education</h3>
